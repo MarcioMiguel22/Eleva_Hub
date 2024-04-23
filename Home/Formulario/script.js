@@ -1,107 +1,131 @@
 // Array contendo as perguntas do questionário
 const questions = [
-  { pergunta: "Rua:", certificacao: "--", categoria: "edifício" },
-  { pergunta: "Elevador:", certificacao: "--", categoria: "edifício" },
-  { pergunta: "Instalação:", certificacao: "--", categoria: "edifício" },
-  { pergunta: "Administração", certificacao: "--", categoria: "edifício" },
   {
-    pergunta: "Qual o Modelo do Elevador ou Marca?",
+    titulo: "MORADA",
+    pergunta: "Qual é o morada onde o edifício está localizado?",
+    certificacao: "--",
+    categoria: "edifício"
+  },
+  { titulo: "Nº do Elevador :", pergunta: "1 , 2 , 3:", certificacao: "--", categoria: "edifício" },
+  { titulo: "ID:", pergunta: "Instalação:", certificacao: "--", categoria: "edifício" },
+  { titulo: "MORADA:", pergunta: "Administração", certificacao: "--", categoria: "edifício" },
+
+  {
+    titulo: "ID:", pergunta: "Nome do técnico - Pré-inspeção?",
     certificacao: "--",
     categoria: "edifício",
   },
   {
+    titulo: "ID:", pergunta: "Qual o Modelo do Elevador ou Marca?",
+    certificacao: "--",
+    categoria: "edifício",
+  },
+
+  {
+    titulo: "ID:",
     pergunta:
       "Qual é a directiva 513/70 , 295/98 ,320/200 , 939/2008 ,176/2008",
     certificacao: "--",
     categoria: "edifício",
   },
+
   {
-    pergunta: "Nome do técnico - Pré-inspeção?",
-    certificacao: "--",
-    categoria: "edifício",
-  },
-  {
+    titulo: "ID:",
     pergunta: "Machine Roomless Elevator – MRL?",
     certificacao: "--",
     categoria: "edifício",
   },
   {
+    titulo: "ARTIGO 7.º:",
     pergunta: "Acesso a casa das máquinas iluminado?",
     certificacao: "C3",
     categoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Etiqueta da casa das máquinas?",
     certificacao: "C3",
     categoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Quadro elétrico não metálico?",
     certificacao: "C3",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Os disjuntores estão identificados?",
     certificacao: "C3",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial principal dispara?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial principal – Amperes?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de iluminação de luz de cabina dispara?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de iluminação de luz de cabina é monofásico?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de iluminação de luz de cabina - amperes?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de Tomadas e casa da máquina dispara?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de Tomadas e casa da máquina é monofásico?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Diferencial de tomadas e casa da máquina – ampere?",
     certificacao: "C2",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Sinalizador de fases?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta:
       "Na possibilidade de alterações ou implementações no quadro de entrada tem espaço?",
     certificacao: "--",
@@ -109,272 +133,334 @@ const questions = [
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Iluminação de emergência da casa das Máquinas?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "cliente",
     subcategoria: "cliente",
   },
   {
+    titulo: "ID:",
     pergunta: "Balaustradas da casa das máquinas ligadas a terra?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Quadro de comando é metálico?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Tem etiqueta de picagem MOB?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Tem chave de emergência?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Tem instruções para resgate?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Tem térmico de casa das máquinas?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Tem variador de frequência?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "A Máquina tem fugas de óleo?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Proteção de roda de tração?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Proteção de cabos?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Proteção de rodas de desvio?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Os buracos na Lage estão protegidos?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Retificação da roda de tração 2cm Max?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Sentido da rotação do motor?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Chave de travão?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Quadro de comando térmico?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Rele inversor de fases?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Fusíveis reforçados?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Comunicação com a cabina pelo telefone 220off?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
-  { pergunta: "BUP?", certificacao: "C2", categoria: "casa das máquinas" },
+  { titulo: "ID:",
+    pergunta: "BUP?", certificacao: "C2", categoria: "casa das máquinas" },
   {
+    titulo: "ID:",
     pergunta: "Fim de curso superior?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Policiar na roda superior?",
-    certificacao: "C2",
+    certificacao: "C1",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Artigo 68?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Sistema de paraquedas descida?",
     certificacao: "C1",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Sistema de para subidas?",
     certificacao: "C1",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Contacto de grifes na cabina?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Fim de curso inferior?",
     certificacao: "C2",
     categoria: "casa das máquinas",
   },
   {
+    titulo: "ID:",
     pergunta: "Policiar na roda inferior?",
-    certificacao: "C2",
+    certificacao: "C1",
     categoria: "casa das máquinas",
   },
-  { pergunta: "Artigo 68?", certificacao: "C1" },
+  { titulo: "ID:",
+    pergunta: "Artigo 68?", certificacao: "C1" },
   {
+    titulo: "ID:",
     pergunta: "Sistema de paraquedas descida?",
-    certificacao: "C2",
+    certificacao: "C1",
     categoria: "quadro eléctrico",
   },
   {
+    titulo: "ID:",
     pergunta: "Sistema de para subidas?",
     certificacao: "C2",
     categoria: "quadro eléctrico",
   },
   {
+    titulo: "ID:",
     pergunta: "Contacto de grifes na cabina?",
     certificacao: "C2",
     categoria: "quadro eléctrico",
   },
   {
+    titulo: "ID:",
     pergunta: "Fim de curso inferior?",
     certificacao: "C2",
     categoria: "quadro eléctrico",
   },
   {
+    titulo: "ID:",
     pergunta: "Policiar na roda inferior?",
     certificacao: "C2",
     categoria: "quadro eléctrico",
   },
   {
+    titulo: "ID:",
     pergunta: "Iluminação de emergência da cabina?",
     certificacao: "C2",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Alarme de cabina 220off?",
     certificacao: "C2",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Botões partidos?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Display ok?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Espalhos?",
     certificacao: "C2",
     categoria: "interior da cabina",
   },
-  { pergunta: "Tapetes?", certificacao: "C2", categoria: "interior da cabina" },
+  { titulo: "ID:",
+    pergunta: "Tapetes?", certificacao: "C3", categoria: "interior da cabina" },
   {
+    titulo: "ID:",
     pergunta: "Corrimões?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Botão de abrir portas?",
     certificacao: "C2",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Anti-entalamento?",
     certificacao: "C2",
     categoria: "interior da cabina",
   },
   {
+    titulo: "ID:",
     pergunta: "Saliências na parede no interior da caixa?",
-    certificacao: "C2",
+    certificacao: "C3",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Revisão botões e stop?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Nylons superiores da cabina?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Cabos de aço?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
-  { pergunta: "Molas?", certificacao: "C2", categoria: "caixa do elevador" },
-  { pergunta: "Tirantes?", certificacao: "C2", categoria: "caixa do elevador" },
+  { titulo: "ID:",
+    pergunta: "Molas?", certificacao: "C2", categoria: "caixa do elevador" },
+  { titulo: "ID:",
+    pergunta: "Tirantes?", certificacao: "C2", categoria: "caixa do elevador" },
   {
+    titulo: "ID:",
     pergunta: "Cerra cabos?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Lâmpadas na caixa?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
-  { pergunta: "6LS?", certificacao: "C2", categoria: "caixa do elevador" },
-  { pergunta: "PORTAS?", certificacao: "C2", categoria: "caixa do elevador" },
+  { titulo: "ID:",
+    pergunta: "6LS?", certificacao: "C2", categoria: "caixa do elevador" },
+  { titulo: "ID:",
+    pergunta: "PORTAS?", certificacao: "C2", categoria: "caixa do elevador" },
   {
+    titulo: "ID:",
     pergunta: "Nylons de contrapeso?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Bloqueadores de pesos?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
   {
+    titulo: "ID:",
     pergunta: "Pesos partidos?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
-  { pergunta: "5Ls?", certificacao: "C2", categoria: "caixa do elevador" },
+  { titulo: "ID:",
+    pergunta: "5Ls?", certificacao: "C2", categoria: "caixa do elevador" },
   {
+    titulo: "ID:",
     pergunta: "Pessa cargas?",
     certificacao: "C2",
     categoria: "caixa do elevador",
   },
-  { pergunta: "Stop do poço?", certificacao: "C2", categoria: "poço" },
-  { pergunta: "Roda tensora?", certificacao: "C2", categoria: "poço" },
-  { pergunta: "Macacos hidráulicos?", certificacao: "C2", categoria: "poço" },
+  { titulo: "ID:",
+    pergunta: "Stop do poço?", certificacao: "C2", categoria: "poço" },
+  { titulo: "ID:",
+    pergunta: "Roda tensora?", certificacao: "C2", categoria: "poço" },
+  { titulo: "ID:",
+    pergunta: "Macacos hidráulicos?", certificacao: "C2", categoria: "poço" },
 ];
 
 // Variável para rastrear o índice da pergunta atual
@@ -395,8 +481,14 @@ const answersContainer = document.getElementById("answers-container");
 document.getElementById("button_download").style.display = "none";
 // Define uma função chamada showQuestion
 function showQuestion() {
-  questionElement.textContent = questions[currentQuestion].pergunta; // Acesso à propriedade 'pergunta'
+  const question = questions[currentQuestion];
+  const title = question.titulo ? `<span class="question-title">${question.titulo}</span>` : ''; // Adiciona "Local:" ao título, se existir
+  questionElement.innerHTML = `${title}<br>${question.pergunta}`; // Adiciona quebra de linha entre título e pergunta
 }
+
+
+
+
 
 // Esta função salva a resposta fornecida pelo usuário para a pergunta atual
 function saveAnswer() {
@@ -526,6 +618,7 @@ function showAnswers() {
 
   // Esconde a caixa de texto de resposta e os botões
   answerElement.style.display = "none";
+  document.getElementById("question-container").style.display = "none";
   questionElement.style.display = "none";
   backButton.style.display = "none";
   nextButton.style.display = "none";
@@ -618,6 +711,7 @@ document
     const thirdAnswer = answerData[2] || "Ainda sem resposta";
     const fourthAnswer = answerData[3] || "Ainda sem resposta";
     const fifthAnswer = answerData[4] || "Ainda sem resposta";
+    const sixthAnswer = answerData[5] || "Ainda sem resposta";
     const seventhAnswer = answerData[6] || "Ainda sem resposta";
     const eighthAnswer = answerData[7] || "Ainda sem resposta";
     const ninthAnswer = answerData[8] || "Ainda sem resposta";
@@ -625,21 +719,21 @@ document
     const initialText = `Projeto de Formulários - Relatório de Inspeção de Elevadores
 Projeto criado por Márcio Miguel em 03/2004
 -------------------------------------------------------------------------
+Este questionário foi criado para coletar informações relacionadas à segurança do Elevador.
+-------------------------------------------------------------------------
 Rua: ${firstAnswer}
 Elevador: ${secondAnswer}
 Instalação: ${thirdAnswer}
 -------------------------------------------------------------------------
 Data do Questionário: ${formattedDate}
 -------------------------------------------------------------------------
-Este questionário foi criado para coletar informações relacionadas à segurança do Elevador.
--------------------------------------------------------------------------
-Nome do técnico Pré-inspeção: ${eighthAnswer}
+Nome do técnico Pré-inspeção: ${fifthAnswer}
 -------------------------------------------------------------------------
 Administração: ${fourthAnswer}
-Qual o Modelo do Elevador ou Marca?: ${fifthAnswer}
+Qual o Modelo do Elevador ou Marca?: ${sixthAnswer}
 Qual é a directiva 513/70, 295/98, 320/200, 939/2008, 176/2008?: ${seventhAnswer}
-Tem casa das Máquinas?: ${eighthAnswer}
-Machine Roomless Elevator – MRL?: ${ninthAnswer}`;
+
+Machine Roomless Elevator – MRL?: ${eighthAnswer}`;
 
     // Adiciona outras perguntas obtidas
 
@@ -719,7 +813,11 @@ Machine Roomless Elevator – MRL?: ${ninthAnswer}`;
 
     // Cria um elemento 'a' temporário para realizar o download do arquivo
     const link = document.createElement("a");
-    const filename = `Formu_${thirdAnswer.toLowerCase().replace(/\s/g, "_")}_${firstAnswer.toLowerCase().replace(/\s/g, "_")}_${formattedDate.replace(/\//g, "_")}.txt`;
+    const filename = `Formu_${thirdAnswer
+      .toLowerCase()
+      .replace(/\s/g, "_")}_${firstAnswer
+      .toLowerCase()
+      .replace(/\s/g, "_")}_${formattedDate.replace(/\//g, "_")}.txt`;
     link.href = url;
     link.download = filename;
 

@@ -1,24 +1,31 @@
 /* Estilos gerais  background */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Cor de fundo do corpo */
+  background-color: #f4f4f4;
+  /* Cor de fundo do corpo */
   margin: 0;
   padding: 0;
 }
 
 /* Estilos do container do formulário Cor de fundo do formulário */
 #form-container {
-  width: 100%;
-  margin: 50px auto; /* Centraliza o formulário na página */
-  background-color: #000; /* Cor de fundo do formulário */
+  width: 80%;
+  margin: 50px auto;
+  /* Centraliza o formulário na página */
+  background-color: #000;
+  /* Cor de fundo do formulário */
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra */
 }
 
 /* Estilos do container da pergunta */
 #question-container {
-  margin-bottom: 20px;
+  background-color: rgb(2, 2, 2);
+  height: 120px;
+
+  border-radius: 10px;
 }
 
 /* Estilos do container da resposta */
@@ -28,15 +35,21 @@ body {
 
 /* Estilos da caixa de resposta */
 #answer {
-  width: 80%; /* 100% da largura do contêiner pai */
-  max-width: 100%; /* Largura máxima da caixa de resposta */
-  height: 65px; /* Altura desejada */
+  width: 100%;
+  /* 100% da largura do contêiner pai */
+  max-width: 100%;
+  /* Largura máxima da caixa de resposta */
+  height: 80px;
+  /* Altura desejada */
   padding: 20px;
-  border: 5px solid #020202; /* Cor inicial da borda */
+  border: 5px solid #020202;
+  /* Cor inicial da borda */
   border-radius: 5px;
   resize: none;
-  color: #000000; /* Cor do texto (preto) */
-  box-sizing: border-box; /* Inclui preenchimento e borda na largura total */
+  color: #000000;
+  /* Cor do texto (preto) */
+  box-sizing: border-box;
+  /* Inclui preenchimento e borda na largura total */
 }
 
 /* Estilos do container dos botões */
@@ -51,20 +64,23 @@ body {
 
 /* Estilos para títulos */
 h2 {
-  color: #fff; /* Cor do texto (verde) */
+  color: #fff;
+  /* Cor do texto (verde) */
   margin-bottom: 20px;
 }
 
 /* Estilos para parágrafos */
 p {
-  color: #ffffff; /* Cor do texto (cor de rosa) */
+  color: #ffffff;
+  /* Cor do texto (cor de rosa) */
   margin-bottom: 10px;
 }
 
 /* Estilos para texto em negrito */
 strong {
   font-weight: bold;
-  color: #007bff; /* Cor do texto (azul) */
+  color: #007bff;
+  /* Cor do texto (azul) */
 }
 
 /* Estilos dos botões no topo SIM E NAO*/
@@ -80,8 +96,10 @@ strong {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #ffffff; /* Cor de fundo dos botões (azul) */
-  color: #000000; /* Cor do texto (branco) */
+  background-color: #ffffff;
+  /* Cor de fundo dos botões (azul) */
+  color: #000000;
+  /* Cor do texto (branco) */
   text-align: center;
   margin-bottom: 10px;
   font-size: 16px;
@@ -92,10 +110,12 @@ strong {
   text-align: center;
   margin-top: 20px;
 }
+
 #button-container-b {
   text-align: center;
   margin-top: 20px;
 }
+
 /* Outros estilos para os botões PERGUNTAS SEGUNTI E ANTERIOR  */
 button {
   padding: 20px 20px;
@@ -103,14 +123,17 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #ffffff; /* Cor de fundo dos botões (azul) */
-  color: #000000; /* Cor do texto (branco) */
+  background-color: #ffffff;
+  /* Cor de fundo dos botões (azul) */
+  color: #000000;
+  /* Cor do texto (branco) */
   font-size: 16px;
 }
 
 /* Efeito de hover nos botões PROXIMA PERGUNTA E PERGUNTAANTERIOR */
 button:hover {
-  background-color: #4faa4a; /* Cor de fundo ao passar o mouse */
+  background-color: #4faa4a;
+  /* Cor de fundo ao passar o mouse */
 }
 
 /* Estilos padrão para os botões de resposta */
@@ -123,29 +146,39 @@ button:hover {
 
 /* Estilo para o botão "Sim" (verde) */
 #yes-btn {
-  color: white; /* Cor do texto (branco) */
+  color: white;
+  /* Cor do texto (branco) */
 }
+
 #yes-btn:active {
-  background-color: rgb(9, 203, 9); /* Cor de fundo quando clicado (verde escuro) */
+  background-color: rgb(9, 203, 9);
+  /* Cor de fundo quando clicado (verde escuro) */
 }
 
 /* Estilo para o botão "Não" (vermelho) */
 #no-btn {
 
-  color: white; /* Cor do texto (branco) */
+  color: white;
+  /* Cor do texto (branco) */
 }
+
 #no-btn:active {
-  background-color: rgb(255, 0, 0); /* Cor de fundo quando clicado (vermelho escuro) */
+  background-color: rgb(255, 0, 0);
+  /* Cor de fundo quando clicado (vermelho escuro) */
 }
 
 /* Estilo para o botão "Não Aplicável" (laranja) */
 #noapt-btn {
 
-  color: black; /* Cor do texto (preto) */
+  color: black;
+  /* Cor do texto (preto) */
 }
+
 #noapt-btn:active {
-  background-color: darkorange; /* Cor de fundo quando clicado (laranja escuro) */
+  background-color: darkorange;
+  /* Cor de fundo quando clicado (laranja escuro) */
 }
+
 /* Estilo para texto verde nas respostas SIM */
 .green-text {
   color: rgb(5, 243, 5);
@@ -168,15 +201,22 @@ button:hover {
 
 /* Estilo para texto verde nas respostas C1 */
 .c1-text {
-  color: rgb(110, 1, 1);
+  color: rgb(250, 0, 237);
 }
 
 /* Estilo para texto vermelho nas respostas C2 */
 .c2-text {
-  color: #ff3002; /* Ou a cor de vermelho que desejar */
+  color: #ff3002;
+  /* Ou a cor de vermelho que desejar */
 }
 
 /* Estilo para texto azul nas respostas C3 */
 .c3-text {
   color: rgb(43, 255, 0);
+}
+.hidden {
+    display: none;
+}
+.question-title {
+  color: rgb(33, 197, 30); /* Defina a cor desejada para o título aqui */
 }
