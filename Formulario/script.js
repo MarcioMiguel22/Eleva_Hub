@@ -8,10 +8,10 @@ const questions = [
   },
   { titulo: "Nº do Elevador :", pergunta: "1 , 2 , 3:", certificacao: "--", categoria: "edifício" },
   { titulo: "ID:", pergunta: "Instalação:", certificacao: "--", categoria: "edifício" },
-  { titulo: "MORADA:", pergunta: "Administração", certificacao: "--", categoria: "edifício" },
+  { titulo: "ID:", pergunta: "Administração", certificacao: "--", categoria: "edifício" },
 
   {
-    titulo: "ID:", pergunta: "Nome do técnico - Pré-inspeção?",
+    titulo: "ID:", pergunta: "Nome do técnico - - Pré-inspeção?",
     certificacao: "--",
     categoria: "edifício",
   },
