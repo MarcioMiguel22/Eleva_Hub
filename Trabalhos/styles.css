@@ -1,0 +1,17 @@
+h1 {
+  text-align: center; /* Centraliza o texto do h1 */
+}
+
+.external-links-container {
+  text-align: center; /* Alinha o conteúdo do container ao centro */
+  margin-bottom: 20px; /* Espaçamento inferior entre os blocos */
+  display: flex; /* Exibe os elementos como flexíveis */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
+}
+
+.external-links-container img {
+  width: 30%; /* Define a largura das imagens como 30% do container */
+  height: auto; /* Permite que a altura seja ajustada automaticamente */
+  margin: 0 1%; /* Espaçamento entre as imagens */
+}
