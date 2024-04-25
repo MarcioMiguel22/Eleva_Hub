@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.external-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.external-links-container a {
+  flex: 0 1 calc(30% - 20px); /* Define a largura de cada coluna */
+  margin: 10px; /* Espaçamento entre as imagens */
+  text-align: center;
+  text-decoration: none;
+}
+
+.external-links-container img {
+  max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+  height: auto;
+}
