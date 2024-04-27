@@ -72,3 +72,6 @@ h2 {
   font-size: 24px; /* Aumentar o tamanho da fonte */
   margin-top: 50px; /* Aumentar a distância da ferramenta de serviço */
 }
+.service-message {
+  margin-top: 10px; /* Espaço superior para separar da div service-tool */
+}
