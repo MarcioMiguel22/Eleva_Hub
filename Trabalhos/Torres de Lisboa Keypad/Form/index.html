@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pergunta sobre Andar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="question">Qual é o andar?</div>
+      <div class="answer">
+        <input type="text" id="andarInput" placeholder="Andar" />
+      </div>
+      <div class="question">Tipo de Keypad:</div>
+      <div class="answer">
+        <label><input type="radio" name="keypad" value="A/B" /> A e B</label
+        ><br />
+        <label><input type="radio" name="keypad" value="C/D" /> C e D</label
+        ><br />
+        <label
+          ><input type="radio" name="keypad" value="Entrada" /> Entrada</label
+        ><br />
+      </div>
+    </div>
+    <div id="resposta"></div>
+    <div class="button-container">
+      <button class="button" onclick="gerarIP()">Gerar IP</button>
+    </div>
+
+    <div class="button-container">
+      <div class="back-button" onclick="window.history.back()">Voltar</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

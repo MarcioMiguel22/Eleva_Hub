@@ -1,0 +1,112 @@
+/* Reset de estilos padrão */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answer {
+  margin-bottom: 20px;
+}
+
+.answer input[type="text"] {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.answer input[type="radio"] {
+  display: none;
+}
+
+.answer label {
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 2px solid #000; /* borda preta e mais grossa */
+  transition: background-color 0.3s ease;
+}
+
+.answer label:hover {
+  background-color: #f0f0f0;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container .button {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #000; /* borda preta e mais grossa */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* remover sublinhado */
+}
+
+.button-container .button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.button-container .back-button {
+  background-color: #dc3545; /* cor vermelha para o botão de voltar */
+  color: #fff; /* cor do texto */
+  border: 2px solid #000; /* borda preta e mais grossa */
+  border-radius: 5px; /* bordas arredondadas */
+  padding: 10px 20px; /* reduzir o espaçamento interno */
+  cursor: pointer; /* cursor de apontar */
+  font-size: 16px; /* tamanho do texto */
+  transition: background-color 0.3s ease; /* transição suave */
+}
+.back-button {
+  display: inline-block; /* Faz o botão ocupar apenas o espaço necessário */
+  background-color: #dc3545; /* cor vermelha */
+  color: #fff; /* cor do texto */
+  border: 2px solid #000; /* borda preta e mais grossa */
+  border-radius: 5px; /* bordas arredondadas */
+  padding: 15px 30px; /* espaçamento interno */
+  cursor: pointer; /* cursor de apontar */
+  font-size: 16px; /* tamanho do texto */
+  transition: background-color 0.3s ease; /* transição suave */
+}
+
+.back-button:hover {
+  background-color: #c82333; /* cor vermelha mais escura ao passar o mouse */
+}
+#resposta {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  display: flex; /* torna o elemento um flex container */
+  justify-content: center; /* centraliza o conteúdo horizontalmente */
+}
