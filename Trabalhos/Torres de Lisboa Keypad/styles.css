@@ -11,6 +11,7 @@ h1 {
 p {
   text-align: center;
 }
+
 .external-links-container {
   display: flex;
   flex-wrap: wrap;
@@ -18,21 +19,21 @@ p {
 }
 
 .external-links-container a {
-  flex: 0 1 calc(30% - 20px); /* Define a largura de cada coluna */
-  margin: 10px; /* Espaçamento entre as imagens */
+  flex: 0 1 calc(30% - 20px);
+  margin: 10px;
   text-align: center;
   text-decoration: none;
 }
 
 .external-links-container img {
-  max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+  max-width: 100%;
   height: auto;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Adiciona espaço abaixo do botão */
+  margin-bottom: 20px;
 }
 
 .button-container a.button {
@@ -42,16 +43,37 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-decoration: none; /* Remover o sublinhado padrão do link */
+  text-decoration: none;
 }
+
 .configuracao {
   margin-top: 20px;
-  padding: 0px 60px;
+  padding: 0px 10px 10px ;
 }
 
 .configuracao p {
   font-size: 14px;
-  padding: 10px 110px; /* Adiciona 20px de padding nos lados esquerdo e direito */
+  padding: 10px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  margin: auto;
+  display: block;
 }

@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Torres de Lisboa - Substituição de KEYPAD</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Importando o arquivo CSS externo -->
-  </head>
-  <body>
-    <h1>Torres de Lisboa - Substituição de KEYPAD</h1>
-    <div class="configuracao">
-      <p>
-        Programação do Keypads feita localmente através do código de instalação
-        347.
-        Este código permite acesso privilegiado para configurar e ajustar as
-        definições dos Keypads de forma direta no local de instalação.
-      </p>
-    </div>
-    <!-- Botão para redirecionar para a pasta "form" -->
-    <div class="button-container">
-      <a href="Form/index.html" class="button">Ir para o formulário</a>
-    </div>
-    <div class="external-links-container">
-      <a href="" target="_blank">
-        <img src="IMG/IMG_20240118_151610.jpg" alt="1" />
-      </a>
-      <a href="" target="_blank">
-        <img src="IMG/IMG_20240118_170312.jpg" alt="2" />
-      </a>
-      <a href="" target="_blank">
-        <img src="" alt="3" />
-      </a>
-      <!-- Adicione mais imagens conforme necessário -->
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torres de Lisboa - Substituição de KEYPAD</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Importando o arquivo CSS externo -->
+</head>
+<body>
+  <h1>Torres de Lisboa - Substituição de KEYPAD</h1>
+  <div class="configuracao">
+    <p>
+      Programação do Keypads feita localmente através do código de instalação
+      347.
+      Este código permite acesso privilegiado para configurar e ajustar as
+      definições dos Keypads de forma direta no local de instalação.
+    </p>
+  </div>
+  <!-- Botão para redirecionar para a pasta "form" -->
+  <div class="button-container">
+    <a href="Form/index.html" class="button">Ir para o formulário</a>
+  </div>
+  <div class="external-links-container">
+    <a href="#" onclick="openLightbox('IMG/IMG_20240118_151610.jpg')">
+      <img src="IMG/IMG_20240118_151610.jpg" alt="1" />
+    </a>
+    <a href="#" onclick="openLightbox('IMG/IMG_20240118_170312.jpg')">
+      <img src="IMG/IMG_20240118_170312.jpg" alt="2" />
+    </a>
+    <!-- Adicione mais imagens conforme necessário -->
+  </div>
 
-    <div class="external-links-container">
-      <a href="" target="_blank">
-        <img src="IMG/WhatsApp Image 2024-04-27 at 19.30.13 (1).jpeg" alt="1" />
-      </a>
+  <div class="external-links-container">
+    <a href="#" onclick="openLightbox('IMG/WhatsApp Image 2024-04-27 at 19.30.13 (1).jpeg')">
+      <img src="IMG/WhatsApp Image 2024-04-27 at 19.30.13 (1).jpeg" alt="1" />
+    </a>
 
-      <a href="" target="_blank">
-        <img src="IMG/WhatsApp Image 2024-04-27 at 19.30.13.jpeg" alt="3" />
-      </a>
-      <a href="" target="_blank">
-        <img src="IMG/IMG_20240424_154113.jpg" alt="3" />
-      </a>
-      <a href="" target="_blank">
-        <img src="IMG/IMG_20240424_153142.jpg" alt="3" />
-      </a>
-      <!-- Adicione mais imagens conforme necessário -->
-    </div>
-  </body>
+    <a href="#" onclick="openLightbox('IMG/WhatsApp Image 2024-04-27 at 19.30.13.jpeg')">
+      <img src="IMG/WhatsApp Image 2024-04-27 at 19.30.13.jpeg" alt="3" />
+    </a>
+    <a href="#" onclick="openLightbox('IMG/IMG_20240424_154113.jpg')">
+      <img src="IMG/IMG_20240424_154113.jpg" alt="3" />
+    </a>
+    <a href="#" onclick="openLightbox('IMG/IMG_20240424_153142.jpg')">
+      <img src="IMG/IMG_20240424_153142.jpg" alt="3" />
+    </a>
+    <!-- Adicione mais imagens conforme necessário -->
+  </div>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImage" src="" alt="Imagem em Tela Cheia" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
