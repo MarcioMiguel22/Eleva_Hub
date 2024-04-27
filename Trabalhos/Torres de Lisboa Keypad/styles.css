@@ -51,7 +51,7 @@ p {
 
 .configuracao p {
   font-size: 14px;
-  padding: 10px 100px; /* Adiciona 20px de padding nos lados esquerdo e direito */
+  padding: 10px 110px; /* Adiciona 20px de padding nos lados esquerdo e direito */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
