@@ -23,16 +23,17 @@ h2 {
 /* Estilos para o display */
 .display {
   width: 85%; /* Largura do display (90% da largura da ferramenta) */
-  height: 150px; /* Altura do display */
+  height: 80px; /* Altura do display */
   background-color: #A1FE19; /* Cor de fundo do display (cinza claro) */
   position: absolute; /* Para posicionar o display dentro da ferramenta */
-  top: 50%; /* Centralizar verticalmente */
+  top: 30%; /* Centralizar verticalmente */
   left: 50%; /* Centralizar o display horizontalmente */
   transform: translate(-50%, -50%); /* Centralizar corretamente */
-  padding: 20px 0px 20px 1px;
+  padding: 50px 0px 20px 1px;
   cursor: pointer; /* Mostrar cursor ao passar sobre o display */
   text-align: center; /* Centralizar texto */
   font-size: 16px; /* Tamanho de fonte padrão */
+  margin-bottom: 20px;
 }
 
 /* Estilo para o estado "grande" */
@@ -74,4 +75,7 @@ h2 {
 }
 .service-message {
   margin-top: 10px; /* Espaço superior para separar da div service-tool */
+}
+.button {
+  margin-bottom: 10px; /* Adicionar espaço entre os botões */
 }

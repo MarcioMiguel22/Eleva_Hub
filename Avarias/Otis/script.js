@@ -10,9 +10,9 @@ function toggleSize(button) {
       // Adiciona uma classe específica para identificar a mensagem
       message.classList.add("service-message-" + button.textContent.trim());
       // Selecione o elemento onde a mensagem deve ser exibida
-      var serviceTool = document.querySelector(".service-tool");
-      // Insere a mensagem abaixo do elemento .service-tool
-      serviceTool.parentNode.insertBefore(message, serviceTool.nextSibling);
+      var display = button.parentNode.parentNode.querySelector(".display");
+      // Insere a mensagem abaixo do display
+      display.appendChild(message);
     } else {
       // Remove a mensagem se já estiver sendo exibida
       message.parentNode.removeChild(message);
