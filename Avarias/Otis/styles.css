@@ -1,81 +1,62 @@
-/* Estilos para o título */
-h2 {
-  text-align: center; /* Centralizar o texto */
-  margin-top: 20px; /* Adicionar espaço em cima */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos para a ferramenta de serviço */
-.service-tool {
+.container {
   display: flex;
-  width: 300px; /* Largura da ferramenta de serviço */
-  height: 400px; /* Altura da ferramenta de serviço */
-  background-color: #2B5EAF; /* Cor de fundo azul */
-  border: 2px solid #000; /* Borda preta sólida */
-  border-radius: 10px; /* Bordas arredondadas */
-  position: relative; /* Para posicionar o display interno */
-  display: flex; /* Usar flexbox para centralizar */
-  justify-content: center; /* Centralizar horizontalmente */
-  align-items: center; /* Centralizar verticalmente */
-  margin: auto;
-  padding: 20px 0px 20px 1px;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/* Estilos para o display */
 .display {
-  width: 85%; /* Largura do display (90% da largura da ferramenta) */
-  height: 80px; /* Altura do display */
-  background-color: #A1FE19; /* Cor de fundo do display (cinza claro) */
-  position: absolute; /* Para posicionar o display dentro da ferramenta */
-  top: 30%; /* Centralizar verticalmente */
-  left: 50%; /* Centralizar o display horizontalmente */
-  transform: translate(-50%, -50%); /* Centralizar corretamente */
-  padding: 50px 0px 20px 1px;
-  cursor: pointer; /* Mostrar cursor ao passar sobre o display */
-  text-align: center; /* Centralizar texto */
-  font-size: 16px; /* Tamanho de fonte padrão */
-  margin-bottom: 20px;
+  overflow-y: auto;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  height: 50vh; /* Definindo a altura como metade da tela */
+  display: flex;
+  align-items: flex-start; /* Alinhando os itens no topo verticalmente */
+  justify-content: center; /* Centralizando horizontalmente */
+  flex-direction: column; /* Organizando os itens em coluna vertical */
 }
 
-/* Estilo para o estado "grande" */
-.display.grande {
-  font-size: 52px; /* Tamanho de fonte maior */
+
+
+.message {
+  margin-bottom: 10px;
 }
 
-/* Estilos para o botão */
-.button-container .button {
-  padding: 15px 30px;
-  background-color: #007bff;
-  color: #A1FE19;
-  border: 2px solid #000; /* borda preta e mais grossa */
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  text-decoration: none; /* remover sublinhado */
-  margin-right: 10px; /* Adicionar espaçamento entre botões */
-}
-
-/* Estilos para o texto dentro do botão */
-.button-container .button span {
-  cursor: pointer; /* Mostrar cursor ao passar sobre o texto */
-  transition: font-size 0.3s ease; /* Transição suave */
-}
-
-/* Estilo para o estado "grande" do texto dentro do botão */
-.button-container .button.grande span {
-  font-size: 24px; /* Tamanho de fonte maior */
-}
-
-/* Estilo para o texto do serviço */
-.service-text {
-  text-align: center;
-  color: #FFF;
-  font-size: 24px; /* Aumentar o tamanho da fonte */
-  margin-top: 50px; /* Aumentar a distância da ferramenta de serviço */
-}
-.service-message {
-  margin-top: 10px; /* Espaço superior para separar da div service-tool */
+.button-row {
+  max-height: calc(50vh - 100px); /* Altura máxima para os botões, limitada a metade da tela */
+  overflow-y: auto; /* Adiciona scroll apenas nos botões */
+  padding: 20px;
 }
 .button {
-  margin-bottom: 10px; /* Adicionar espaço entre os botões */
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 90px; /* Definindo uma largura fixa para os botões */
+}
+
+
+.button.clicked {
+  background-color: #0cb300; /* Cor verde quando o botão é clicado */
+}
+.message[data-content="NOR/diag - On: normal function"] {
+  color: #0cb300; /* Cor verde para a mensagem ativa */
+}
+
+.message[data-content="Off: NAV, DTO, DTC, ATT, CHC, EFO, EFS, ISC, drive-fault"] {
+  color: #ff0000; /* Cor vermelha para a mensagem inativa */
 }

@@ -1,21 +1,18 @@
-function toggleSize(button) {
-  // Verifica se o botão clicado tem o texto "Es" ou "dfc"
-  if (button.textContent.trim() === "Es" || button.textContent.trim() === "dfc") {
-    // Verifica se a mensagem correspondente já está sendo exibida
-    var message = document.querySelector(".service-message-" + button.textContent.trim());
-    if (!message) {
-      // Cria um elemento de parágrafo para exibir a mensagem
-      message = document.createElement("p");
-      message.textContent = button.textContent.trim() + " - Seguranças ativadas";
-      // Adiciona uma classe específica para identificar a mensagem
-      message.classList.add("service-message-" + button.textContent.trim());
-      // Selecione o elemento onde a mensagem deve ser exibida
-      var display = button.parentNode.parentNode.querySelector(".display");
-      // Insere a mensagem abaixo do display
-      display.appendChild(message);
-    } else {
-      // Remove a mensagem se já estiver sendo exibida
-      message.parentNode.removeChild(message);
-    }
+function toggleSize(message) {
+  var display = document.querySelector(".display");
+  var existingMessage = display.querySelector(".message[data-content='" + message + "']");
+  if (existingMessage) {
+    display.removeChild(existingMessage);
+  } else {
+    var messageElement = document.createElement("div");
+    messageElement.textContent = message;
+    messageElement.classList.add("message");
+    messageElement.setAttribute("data-content", message);
+    display.appendChild(messageElement);
   }
 }
+document.querySelectorAll('.button').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('clicked'); // Alternar entre adicionar e remover a classe "clicked"
+  });
+});
