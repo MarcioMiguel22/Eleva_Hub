@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+    <!-- Adicione links para o CSS, se necessário -->
+    <style>
+        #imagem-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            cursor: grab;
+        }
+
+        #imagem {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .zoom-button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .zoom-out {
+            left: 100px;
+           bottom: 40px;
+        }
+
+        .zoom-in {
+            right: 100px;
+            bottom: 40px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .grabbing {
+            cursor: grabbing !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container para a imagem -->
+    <div id="imagem-container">
+        <!-- Coloque a imagem clicada aqui -->
+        <img id="imagem" src="" alt="Imagem">
+    </div>
+
+    <div class="zoom-button zoom-out" onclick="zoomOut()">-</div>
+    <div class="zoom-button zoom-in" onclick="zoomIn()">+</div>
+
+    <a class="back-button" onclick="history.back()">Voltar</a>
+
+    <script>
+        var zoomLevel = 1.0;
+        var zoomIncrement = 0.1;
+
+        function zoomOut() {
+            zoomLevel -= zoomIncrement;
+            if (zoomLevel < zoomIncrement) {
+                zoomLevel = zoomIncrement;
+            }
+            updateZoom();
+        }
+
+        function zoomIn() {
+            zoomLevel += zoomIncrement;
+            updateZoom();
+        }
+
+        function updateZoom() {
+            var imagem = document.getElementById('imagem');
+            imagem.style.transform = "scale(" + zoomLevel + ")";
+        }
+
+        // Este script irá pegar a URL da imagem da query string da URL
+        // e definirá a src da imagem com essa URL
+        document.addEventListener('DOMContentLoaded', function() {
+            var queryParams = new URLSearchParams(window.location.search);
+            var imageUrl = queryParams.get('image');
+            var imagem = document.getElementById('imagem');
+            if (imageUrl && imagem) {
+                imagem.src = imageUrl;
+            }
+        });
+
+        // Adiciona event listeners para os eventos de mouse para arrastar a imagem
+        var imagemContainer = document.getElementById('imagem-container');
+        var isDragging = false;
+
+        imagemContainer.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            imagemContainer.classList.add('grabbing');
+        });
+
+        document.addEventListener('mouseup', function(e) {
+            if (isDragging) {
+                isDragging = false;
+                imagemContainer.classList.remove('grabbing');
+            }
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            var deltaX = e.movementX;
+            var deltaY = e.movementY;
+            imagemContainer.scrollLeft += deltaX;
+            imagemContainer.scrollTop += deltaY;
+        });
+    </script>
+</body>
+</html>
