@@ -34,7 +34,7 @@ body {
 .button-row {
   max-height: calc(50vh - 100px); /* Altura máxima para os botões, limitada a metade da tela */
   overflow-y: auto; /* Adiciona scroll apenas nos botões */
-  padding-left: 50px;
+  padding-left: 80px;
 
 }
 
