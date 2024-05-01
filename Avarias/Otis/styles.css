@@ -34,8 +34,10 @@ body {
 .button-row {
   max-height: calc(50vh - 100px); /* Altura máxima para os botões, limitada a metade da tela */
   overflow-y: auto; /* Adiciona scroll apenas nos botões */
-  padding: 20px;
+  padding-left: 50px;
+
 }
+
 .button {
   background-color: #007bff;
   border: none;
@@ -43,11 +45,14 @@ body {
   cursor: pointer;
   font-size: 16px;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  width: 92px; /* Definindo uma largura fixa para os botões */
+  width: 90px; /* Definindo uma largura fixa para os botões */
+
 }
+
+
 
 
 .button.clicked {
@@ -59,4 +64,7 @@ body {
 
 .message[data-content="Off: NAV, DTO, DTC, ATT, CHC, EFO, EFS, ISC, drive-fault"] {
   color: #ff0000; /* Cor vermelha para a mensagem inativa */
+}
+.button-container {
+  margin-left: 100px; /* Ajuste a quantidade de margem conforme necessário */
 }
