@@ -72,3 +72,8 @@ body {
 .button-container {
   margin-left: 100px; /* Ajuste a quantidade de margem conforme necessário */
 }
+#searchBar {
+  margin: 10px auto; /* Para centralizar horizontalmente */
+  width: 80%; /* Definindo a largura */
+  padding: 10px;
+}
