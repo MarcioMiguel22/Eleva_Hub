@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planilha Otis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table>
+      <h1>Planilha Otis</h1>
+      <h2>Hórario</h2>
+
+      <tr>
+        <th>TEMPO M</th>
+        <th>ENTRADA</th>
+        <th>SAIDA</th>
+        <th>OP</th>
+        <th>INSTALAÇÃO</th>
+        <th>ROTA</th>
+        <th>DESCRIÇÃO</th>
+      </tr>
+    </table>
+
+      <!-- Tabela de cálculo -->
+      <div class="table-calculation">
+        <h1>Cálculo de Horas</h1>
+        <table>
+          <tr>
+            <th>Descrição</th>
+            <th>Horas</th>
+          </tr>
+          <tr>
+            <td>Horas Trabalhadas</td>
+            <td id="horas-trabalhadas">0</td>
+          </tr>
+          <tr>
+            <td>Horas de Deslocação</td>
+            <td id="horas-deslocacao">0</td>
+          </tr>
+          <tr>
+            <td>Total de Horas</td>
+            <td id="total-horas">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form">
+        <h1>Adicionar Linha</h1>
+        <div class="input-group">
+          <label for="tempo">Tempo da Manutenção:</label>
+          <input type="text" id="tempo" name="tempo" />
+        </div>
+        <div class="input-group">
+          <label for="entrada">Entrada:</label>
+          <input type="text" id="entrada" name="entrada" />
+        </div>
+        <div class="input-group">
+          <label for="saida">Saída:</label>
+          <input type="text" id="saida" name="saida" />
+        </div>
+        <div class="input-group">
+          <label for="op">OP:</label>
+          <input type="text" id="op" name="op" />
+        </div>
+        <div class="input-group">
+          <label for="instalacao">Instalação:</label>
+          <input type="text" id="instalacao" name="instalacao" />
+        </div>
+        <div class="input-group">
+          <label for="rota">Rota:</label>
+          <input type="text" id="rota" name="rota" />
+        </div>
+        <div class="input-group">
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" />
+        </div>
+        <button onclick="adicionarLinha()">Adicionar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

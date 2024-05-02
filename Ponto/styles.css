@@ -1,0 +1,67 @@
+/* Adicione seus estilos CSS aqui */
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; /* Fundo cinza claro */
+}
+
+.container {
+  margin-top: 20px;
+  width: 80%; /* Container centralizado com 80% de largura */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff; /* Fundo branco */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Fundo cinza claro para células do cabeçalho */
+}
+
+/* Estilos do formulário */
+.form {
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: left; /* Centraliza o formulário horizontalmente */
+}
+
+.form label {
+  display: block; /* Torna os rótulos em blocos para melhor espaçamento */
+  margin-bottom: 8px; /* Adiciona espaço abaixo de cada rótulo */
+  font-weight: bold; /* Torna os rótulos em negrito */
+}
+
+.form input {
+  width: 100%; /* Faz os campos de entrada preencherem seu contêiner */
+  padding: 10px; /* Aumenta o preenchimento para melhorar os alvos de toque */
+  margin-bottom: 16px; /* Adiciona espaço entre os campos de entrada */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 6px; /* Cantos arredondados */
+  box-sizing: border-box; /* Inclui o preenchimento e a borda na largura */
+}
+
+.form button {
+  width: 100%; /* Faz o botão preencher seu contêiner */
+  padding: 12px 20px; /* Aumenta o preenchimento */
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Cantos arredondados */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave para o efeito de hover */
+}
+
+.form button:hover {
+  background-color: #45a049; /* Verde mais escuro no hover */
+}
