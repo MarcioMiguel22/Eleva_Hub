@@ -1,5 +1,3 @@
-/* Adicione seus estilos CSS aqui */
-
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
@@ -19,6 +17,7 @@ table {
   border-collapse: collapse;
   background-color: #fff; /* Fundo branco */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+  margin-bottom: 20px; /* Adiciona espaço abaixo da tabela */
 }
 
 th, td {
@@ -33,35 +32,53 @@ th {
 /* Estilos do formulário */
 .form {
   max-width: 400px; /* Largura máxima do formulário */
-  margin: left; /* Centraliza o formulário horizontalmente */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form label {
-  display: block; /* Torna os rótulos em blocos para melhor espaçamento */
-  margin-bottom: 8px; /* Adiciona espaço abaixo de cada rótulo */
-  font-weight: bold; /* Torna os rótulos em negrito */
+.form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.form input {
-  width: 100%; /* Faz os campos de entrada preencherem seu contêiner */
-  padding: 10px; /* Aumenta o preenchimento para melhorar os alvos de toque */
-  margin-bottom: 16px; /* Adiciona espaço entre os campos de entrada */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 6px; /* Cantos arredondados */
-  box-sizing: border-box; /* Inclui o preenchimento e a borda na largura */
+.input-group {
+  margin-bottom: 20px;
 }
 
-.form button {
-  width: 100%; /* Faz o botão preencher seu contêiner */
-  padding: 12px 20px; /* Aumenta o preenchimento */
-  background-color: #4CAF50; /* Verde */
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 6px; /* Cantos arredondados */
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Transição suave para o efeito de hover */
+  transition: background-color 0.3s;
 }
 
-.form button:hover {
-  background-color: #45a049; /* Verde mais escuro no hover */
+.button-container button:hover {
+  background-color: #45a049;
 }
