@@ -1,40 +1,18 @@
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7; /* Fundo cinza claro */
 }
 
 .container {
-  margin-top: 20px;
+  display: flex;
   width: 80%; /* Container centralizado com 80% de largura */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Estilos da tabela */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff; /* Fundo branco */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
-  margin-bottom: 20px; /* Adiciona espaço abaixo da tabela */
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2; /* Fundo cinza claro para células do cabeçalho */
+  margin: 20px auto; /* Centraliza verticalmente e adiciona margem */
 }
 
 /* Estilos do formulário */
 .form {
-  max-width: 400px; /* Largura máxima do formulário */
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
+  flex: auto;
+  margin: 0 auto; /* Centraliza horizontalmente */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -55,8 +33,7 @@ th {
   font-weight: bold;
 }
 
-.input-group input[type="text"],
-.input-group input[type="number"] {
+.input-group input[type="text"] {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -81,4 +58,41 @@ th {
 
 .button-container button:hover {
   background-color: #45a049;
+}
+/* Estilo para o elemento select */
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fff; /* Cor de fundo */
+  color: #333; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  /* Adicione essas propriedades para aumentar o tamanho do select */
+  height: 40px; /* Altura do select */
+
+}
+
+
+.input-group select:focus {
+  outline: none; /* Remove o contorno ao focar */
+  border-color: #4CAF50; /* Cor da borda ao focar */
+}
+
+.input-group select option {
+  background-color: #fff; /* Cor de fundo das opções */
+  color: #333; /* Cor do texto das opções */
+}
+
+/* Estilo para o elemento select dentro do container */
+.container select {
+  width: calc(100% - 22px); /* Leva em consideração o padding */
+  padding: 10px;
+}
+
+/* Estilo para o botão dentro do container */
+.container button {
+  width: calc(100% - 22px); /* Leva em consideração o padding */
 }

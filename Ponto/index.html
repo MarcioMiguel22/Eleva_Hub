@@ -1,94 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Planilha Otis</title>
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-</head>
-<body>
-<table class="schedule-table">
-<h1>Planilha Otis</h1>
-<div class="container">
-  <button onclick="gerarICS()">Adicionar Evento ao Calendário</button>
-</div>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documento</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>PONTO</h1>
+        <div class="input-group">
+          <label for="Localizacao">Localização:</label>
+          <select
+            id="operacao"
+            name="Localizacao"
+            onchange="selecionarOperacao()"
+          >
+            <option value="obterLocalizacao">Obter Localização</option>
+            <option value="inserirManualmente">Inserir Manualmente</option>
+          </select>
+          <input
+            type="text"
+            id="caixa-programavel"
+            name="instalacao"
+            style="display: none"
+          />
+        </div>
 
-<h2>Hórario</h2>
+        <div class="input-group">
+          <label for="instalacao">Instalação:</label>
+          <input type="text" id="instalacao" name="instalacao" />
+        </div>
+        <div class="input-group">
+          <label for="entrada">Entrada:</label>
+          <input type="text" id="entrada" name="entrada" class="flatpickr" />
+        </div>
+        <div class="input-group">
+          <label for="saida">Saída:</label>
+          <input type="text" id="saida" name="saida" class="flatpickr" />
+        </div>
+        <div class="input-group">
+          <label for="operacao-select">Operação:</label>
+          <select id="operacao-select" name="operacao">
+            <option value="Manutenção">Manutenção</option>
+            <option value="Avarias">Avarias</option>
+            <option value="Afinação">Afinação</option>
+            <option value="Reparação">Reparação</option>
+            <option value="Improdutivo">Improdutivo</option>
+            <option value="Pessoas Presas">Pessoas Presas</option>
+          </select>
+        </div>
 
-<tr>
-<th>TEMPO M</th>
-<th>ENTRADA</th>
-<th>SAIDA</th>
-<th>TOTAL</th>
-<th>OP</th>
-<th>INSTALAÇÃO</th>
-<th>ROTA</th>
-<th>DESCRIÇÃO</th>
-</tr>
-</table>
-
-<!-- Tabela de cálculo -->
-<div class="table-calculation">
-<h1>Cálculo de Horas</h1>
-<table>
-<tr>
-<th>Descrição</th>
-<th>Horas</th>
-</tr>
-<tr>
-<td>Horas Trabalhadas</td>
-<td id="horas-trabalhadas">0</td>
-</tr>
-<tr>
-<td>Horas de Deslocação</td>
-<td id="horas-deslocacao">0</td>
-</tr>
-<tr>
-<td>Total de Horas</td>
-<td id="total-horas">0</td>
-</tr>
-</table>
-</div>
-
-<div class="container">
-<div class="form">
-<h1>Adicionar Linha</h1>
-<div class="input-group">
-<label for="tempo">Tempo da Manutenção:</label>
-<input type="number" id="tempo" name="tempo" />
-</div>
-<div class="input-group">
-<label for="entrada">Entrada:</label>
-<input type="text" id="entrada" name="entrada" class="flatpickr" />
-</div>
-<div class="input-group">
-<label for="saida">Saída:</label>
-<input type="text" id="saida" name="saida" class="flatpickr" />
-</div>
-<div class="input-group">
-<label for="op">OP:</label>
-<input type="text" id="op" name="op" />
-</div>
-<div class="input-group">
-<label for="instalacao">Instalação:</label>
-<input type="text" id="instalacao" name="instalacao" />
-</div>
-<div class="input-group">
-<label for="rota">Rota:</label>
-<input type="text" id="rota" name="rota" />
-</div>
-<div class="input-group">
-<label for="descricao">Descrição:</label>
-<input type="text" id="descricao" name="descricao" />
-</div>
-<div class="button-container">
-<button onclick="adicionarLinha()">Adicionar</button>
-</div>
-</div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="script.js"></script>
-</body>
+        <div class="input-group">
+          <label for="rota-select">Rota:</label>
+          <select id="rota-select" name="rota">
+            <option value="7D">7D</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" />
+        </div>
+        <div class="button-container">
+          <button onclick="adicionarLinha()">Adicionar</button>
+        </div>
+      </div>
+      <button onclick="redirecionarParaOutraPagina()">Ver Tabela</button>
+    </div>
+  </body>
 </html>
