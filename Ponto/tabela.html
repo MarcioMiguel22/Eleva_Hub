@@ -7,7 +7,46 @@
   <link rel="stylesheet" href="styles_tabela.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-</head>
+</head><script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Função para verificar a orientação do dispositivo
+      function verificarOrientacao() {
+          var orientacaoAlerta = document.getElementById("orientacao-alerta");
+          if (window.matchMedia("(orientation: portrait)").matches) {
+              // Se estiver em retrato, exibe o alerta
+              orientacaoAlerta.style.display = "block";
+          } else {
+              // Se não, esconde o alerta
+              orientacaoAlerta.style.display = "none";
+          }
+      }
+
+      // Criação do elemento de alerta se não existir
+      if (!document.getElementById("orientacao-alerta")) {
+          var alerta = document.createElement("div");
+          alerta.id = "orientacao-alerta";
+          alerta.style.position = "fixed";
+          alerta.style.top = "0";
+          alerta.style.left = "0";
+          alerta.style.width = "100%";
+          alerta.style.height = "100%";
+          alerta.style.backgroundColor = "rgba(0,0,0,0.8)";
+          alerta.style.color = "white";
+          alerta.style.display = "none";
+          alerta.style.justifyContent = "center";
+          alerta.style.alignItems = "center";
+          alerta.style.fontSize = "24px";
+          alerta.style.zIndex = "1000";
+          alerta.innerText = "Por favor, vire seu dispositivo para a horizontal.";
+          document.body.appendChild(alerta);
+      }
+
+      // Adiciona listeners para mudanças de orientação e ao carregar a página
+      window.addEventListener("orientationchange", verificarOrientacao);
+      window.addEventListener("resize", verificarOrientacao);
+      verificarOrientacao(); // Verifica imediatamente ao carregar
+  });
+  </script>
 <body>
   <div class="container">
     <h1>Planilha Otis</h1>
