@@ -104,18 +104,18 @@ function downloadTable() {
 
     // Calcula a posição inicial para a imagem
     let imageHeight = canvas.height * 0.90;
-    let imageWidth = canvas.width * 0.90;
-    let startY = 60;
+    let imageWidth = canvas.width *  0.90;
+    let startY = 80;
 
     pdf.addImage(mainTableImg, 'PNG', 20, startY, imageWidth, imageHeight);
 
     // Captura a tabela de operações
     html2canvas(document.querySelector(".operations-table"), {
-      scale: 0.90
+      scale: 0.81
     }).then(operationsCanvas => {
       const operationsTableImg = operationsCanvas.toDataURL('image/png');
-      let operationsImageHeight = operationsCanvas.height * 0.90;
-      let operationsImageWidth = operationsCanvas.width * 0.90;
+      let operationsImageHeight = operationsCanvas.height * 1;
+      let operationsImageWidth = operationsCanvas.width * 1;
       let operationsStartY = startY + imageHeight + 20;
 
       pdf.addImage(operationsTableImg, 'PNG', 20, operationsStartY, operationsImageWidth, operationsImageHeight);
