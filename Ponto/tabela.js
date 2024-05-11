@@ -81,7 +81,7 @@ function resetTable() {
 function downloadTable() {
   // Captura a tabela principal com uma escala um pouco maior
   html2canvas(document.querySelector(".schedule-table"), {
-    scale: 0.90
+    scale: 0.91
   }).then(canvas => {
     const mainTableImg = canvas.toDataURL('image/png');
     const pdf = new jspdf.jsPDF({
@@ -103,15 +103,15 @@ function downloadTable() {
     pdf.text(`Data da Tabela: ${formattedDate}`, pdf.internal.pageSize.getWidth() / 2, 50, { align: 'center' });
 
     // Calcula a posição inicial para a imagem
-    let imageHeight = canvas.height * 0.90;
-    let imageWidth = canvas.width *  0.90;
-    let startY = 80;
+    let imageHeight = canvas.height * 0.91;
+    let imageWidth = canvas.width *  0.91;
+    let startY = 81;
 
     pdf.addImage(mainTableImg, 'PNG', 20, startY, imageWidth, imageHeight);
 
     // Captura a tabela de operações
     html2canvas(document.querySelector(".operations-table"), {
-      scale: 0.81
+      scale: 0.85
     }).then(operationsCanvas => {
       const operationsTableImg = operationsCanvas.toDataURL('image/png');
       let operationsImageHeight = operationsCanvas.height * 1;
