@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <td>${horario.operacao}</td>
       <td>${horario.instalacao}</td>
       <td>${horario.rota}</td>
-      <td class="descricao-cell" title="${horario.descricao}">${horario.descricao}</td>
+
     `;
   });
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Adicionar a linha de total acumulado ao HTML
   var totalHoursAndMinutes = convertToHoursAndMinutes(totalAcumulado);
   var rowTotal = tableBody.insertRow();
-  rowTotal.innerHTML = `<td colspan="3">Total Acumulado</td><td colspan="5">${totalAcumulado.toFixed(2)} min (${totalHoursAndMinutes})</td>`;
+  rowTotal.innerHTML = `<td colspan="2">Total Acumulado</td><td colspan="5">${totalAcumulado.toFixed(2)} min (${totalHoursAndMinutes})</td>`;
 
   // Cria a tabela de tempos por operação
   var operationsContainer = document.createElement("div");
@@ -79,8 +79,10 @@ function resetTable() {
 // Função para fazer download da tabela em PDF
 
 function downloadTable() {
-  // Primeiro capturamos a tabela principal
-  html2canvas(document.querySelector(".schedule-table")).then(canvas => {
+  // Captura a tabela principal com uma escala um pouco maior
+  html2canvas(document.querySelector(".schedule-table"), {
+    scale: 0.90
+  }).then(canvas => {
     const mainTableImg = canvas.toDataURL('image/png');
     const pdf = new jspdf.jsPDF({
       orientation: 'landscape',
@@ -96,23 +98,40 @@ function downloadTable() {
       year: 'numeric'
     });
 
-    pdf.setFontSize(18);
-    pdf.text(title, pdf.internal.pageSize.getWidth() / 2, 40, { align: 'center' });
-    pdf.setFontSize(12);
-    pdf.text(`Data da Tabela: ${formattedDate}`, pdf.internal.pageSize.getWidth() / 2, 60, { align: 'center' });
+    pdf.setFontSize(14);
+    pdf.text(title, pdf.internal.pageSize.getWidth() / 2, 30, { align: 'center' });
+    pdf.text(`Data da Tabela: ${formattedDate}`, pdf.internal.pageSize.getWidth() / 2, 50, { align: 'center' });
 
-    addImageToPDF(pdf, mainTableImg, 80, function(newPosition) {
-      // Captura a segunda tabela de operações
-      html2canvas(document.querySelector(".operations-table")).then(operationsCanvas => {
-        const operationsTableImg = operationsCanvas.toDataURL('image/png');
-        // Adiciona a segunda tabela ao PDF
-        addImageToPDF(pdf, operationsTableImg, newPosition, function() {
-          pdf.save("planilha_horarios.pdf");
-        });
-      });
+    // Calcula a posição inicial para a imagem
+    let imageHeight = canvas.height * 0.90;
+    let imageWidth = canvas.width * 0.90;
+    let startY = 60;
+
+    pdf.addImage(mainTableImg, 'PNG', 20, startY, imageWidth, imageHeight);
+
+    // Captura a tabela de operações
+    html2canvas(document.querySelector(".operations-table"), {
+      scale: 0.90
+    }).then(operationsCanvas => {
+      const operationsTableImg = operationsCanvas.toDataURL('image/png');
+      let operationsImageHeight = operationsCanvas.height * 0.90;
+      let operationsImageWidth = operationsCanvas.width * 0.90;
+      let operationsStartY = startY + imageHeight + 20;
+
+      pdf.addImage(operationsTableImg, 'PNG', 20, operationsStartY, operationsImageWidth, operationsImageHeight);
+
+      // Cria o nome do arquivo PDF de forma dinâmica, usando a data
+      const dynamicFileName = `Ponto_${formattedDate.replace(/\//g, '-')}.pdf`;
+
+      // Salva o PDF com o nome dinâmico
+      pdf.save(dynamicFileName);
     });
   });
 }
+
+
+
+
 
 function addImageToPDF(pdf, imageData, startPosition, callback) {
   const pdfWidth = pdf.internal.pageSize.getWidth();

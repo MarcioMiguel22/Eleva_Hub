@@ -19,7 +19,7 @@ body {
 .form {
   width: 80%; /* 80% da largura do container */
   margin-bottom: 20px;
-  margin-top: 200px;  /* Adiciona espaço superior entre o topo da página e o formulário */
+  margin-top: 50px;  /* Adiciona espaço superior entre o topo da página e o formulário */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);

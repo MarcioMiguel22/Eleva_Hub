@@ -12,15 +12,6 @@
     <div class="form">
       <h1>Registro de Horários</h1>
       <div class="input-group">
-        <label for="Localizacao">Localização:</label>
-        <select id="operacao" name="Localizacao" onchange="selecionarOperacao()">
-          <option value="obterLocalizacao">Obter Localização</option>
-          <option value="inserirManualmente">Inserir Manualmente</option>
-        </select>
-        <input type="text" id="caixa-programavel" name="instalacao" style="display: none">
-      </div>
-
-      <div class="input-group">
         <label for="instalacao">Instalação:</label>
         <input type="text" id="instalacao" name="instalacao">
       </div>
@@ -49,10 +40,6 @@
         <select id="rota-select" name="rota">
           <option value="7D">7D</option>
         </select>
-      </div>
-      <div class="input-group">
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" name="descricao">
       </div>
       <div class="button-container">
         <button onclick="adicionarLinha()">Adicionar</button>
