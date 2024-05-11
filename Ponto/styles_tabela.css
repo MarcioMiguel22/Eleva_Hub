@@ -1,0 +1,69 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* Mantém o layout fixo para consistência */
+}
+
+.schedule-table th, .schedule-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word; /* Quebra a palavra para ajustar dentro da célula */
+  vertical-align: top; /* Alinha o texto ao topo da célula */
+}
+
+.schedule-table td {
+  overflow: visible; /* Permite que o conteúdo seja totalmente visível */
+  white-space: normal; /* Permite quebra de linha natural */
+}
+
+.schedule-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+/* Estilo para o contêiner das operações */
+.operations-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a nova tabela de operações */
+.operations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.operations-table th,
+.operations-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.operations-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.schedule-table .descricao-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px; /* Defina o tamanho conforme necessário */
+}

@@ -1,18 +1,25 @@
-/* Estilos gerais */
+/* Estilos Gerais */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   display: flex;
-  width: 80%; /* Container centralizado com 80% de largura */
-  margin: 20px auto; /* Centraliza verticalmente e adiciona margem */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;  /* Espaçamento superior */
+  padding-bottom: 60px;  /* Espaçamento inferior */
+  height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Estilos do formulário */
 .form {
-  flex: auto;
-  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 80%; /* 80% da largura do container */
+  margin-bottom: 20px;
+  margin-top: 200px;  /* Adiciona espaço superior entre o topo da página e o formulário */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +40,8 @@ body {
   font-weight: bold;
 }
 
-.input-group input[type="text"] {
+.input-group input[type="text"],
+.input-group select {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -58,41 +66,4 @@ body {
 
 .button-container button:hover {
   background-color: #45a049;
-}
-/* Estilo para o elemento select */
-.input-group select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  background-color: #fff; /* Cor de fundo */
-  color: #333; /* Cor do texto */
-  font-size: 16px; /* Tamanho da fonte */
-  /* Adicione essas propriedades para aumentar o tamanho do select */
-  height: 40px; /* Altura do select */
-
-}
-
-
-.input-group select:focus {
-  outline: none; /* Remove o contorno ao focar */
-  border-color: #4CAF50; /* Cor da borda ao focar */
-}
-
-.input-group select option {
-  background-color: #fff; /* Cor de fundo das opções */
-  color: #333; /* Cor do texto das opções */
-}
-
-/* Estilo para o elemento select dentro do container */
-.container select {
-  width: calc(100% - 22px); /* Leva em consideração o padding */
-  padding: 10px;
-}
-
-/* Estilo para o botão dentro do container */
-.container button {
-  width: calc(100% - 22px); /* Leva em consideração o padding */
 }
