@@ -4,13 +4,8 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-}
 
-p {
-  text-align: center;
-}
+
 
 .external-links-container {
   display: flex;
@@ -46,17 +41,9 @@ p {
   text-decoration: none;
 }
 
-.configuracao {
-  margin-top: 20px;
-  padding: 0px 10px 10px ;
-}
 
-.configuracao p {
-  font-size: 14px;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+
+
 
 .lightbox {
   display: none;
@@ -79,4 +66,26 @@ p {
 }
 h1, h2 {
   text-align: center;
+}
+#markdown-content  {
+  /* Adicione estilos aqui */
+  background-color: rgb(110, 237, 248);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* Defina a largura desejada */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  overflow: hidden; /* Evita que o texto saia da caixa */
+}
+.configuracao {
+  background-color: rgb(110, 237, 248);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  width: 80%; /* Defina a largura desejada */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.configuracao p {
+  color: black; /* Define a cor do texto dentro da caixa */
+  margin: 0; /* Remove a margem padrão do parágrafo */
 }
