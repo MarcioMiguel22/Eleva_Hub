@@ -81,11 +81,11 @@ function resetTable() {
 function downloadTable() {
   // Captura a tabela principal com uma escala um pouco maior
   html2canvas(document.querySelector(".schedule-table"), {
-    scale: 0.91
+    scale: 0.1
   }).then(canvas => {
     const mainTableImg = canvas.toDataURL('image/png');
     const pdf = new jspdf.jsPDF({
-      orientation: 'portrait',
+      orientation: 'landscape',
       unit: 'pt',
       format: 'a4'
     });
