@@ -85,7 +85,7 @@ function downloadTable() {
   }).then(canvas => {
     const mainTableImg = canvas.toDataURL('image/png');
     const pdf = new jspdf.jsPDF({
-      orientation: 'landscape',
+      orientation: 'portrait',
       unit: 'pt',
       format: 'a4'
     });
