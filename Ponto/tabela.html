@@ -1,78 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horários Tabelas</title>
-    <link rel="stylesheet" href="styles_tabela.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  </head>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function verificarOrientacao() {
-        var orientacaoAlerta = document.getElementById("orientacao-alerta");
-        if (window.matchMedia("(orientation: portrait)").matches) {
-          orientacaoAlerta.style.display = "flex"; // Usa flex para centralizar o conteúdo
-        } else {
-          orientacaoAlerta.style.display = "none";
-        }
-      }
-
-      // Criação ou obtenção do elemento de alerta
-      var alerta = document.getElementById("orientacao-alerta");
-      if (!alerta) {
-        alerta = document.createElement("div");
-        alerta.id = "orientacao-alerta";
-        alerta.style.position = "fixed";
-        alerta.style.top = "0";
-        alerta.style.left = "0";
-        alerta.style.width = "100%";
-        alerta.style.height = "100%";
-        alerta.style.backgroundColor = "rgba(0,0,0,0.8)";
-        alerta.style.color = "white";
-        alerta.style.display = "none";
-        alerta.style.justifyContent = "center";
-        alerta.style.alignItems = "center";
-        alerta.style.fontSize = "24px";
-        alerta.style.zIndex = "1000";
-        alerta.style.flexDirection = "column"; // Organiza o conteúdo em coluna
-        document.body.appendChild(alerta);
-      }
-
-      // Define o conteúdo do alerta com o ícone e o texto
-      alerta.innerHTML =
-        "<div>🔄</div><div>Por favor, vire seu dispositivo para a horizontal.</div>";
-
-      // Adiciona listeners para mudanças de orientação e ao carregar a página
-      window.addEventListener("orientationchange", verificarOrientacao);
-      window.addEventListener("resize", verificarOrientacao);
-      verificarOrientacao(); // Verifica imediatamente ao carregar
-    });
-  </script>
-  <body>
-    <div class="container">
-      <h1>Horários Tabelas</h1>
-      <div class="button-container">
-        <button id="resetBtn">Resetar Tabela</button>
-        <button id="downloadBtn">Download da Tabela</button>
-      </div>
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Registo</th>
-            <th>Entrada</th>
-            <th>Saída</th>
-            <th>Total (min)</th>
-            <th>Operação</th>
-            <th>Instalação</th>
-            <th>Rota</th>
-
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horários Tabelas</title>
+  <link rel="stylesheet" href="styles_tabela.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Horários Tabelas</h1>
+    <div class="button-container">
+      <button id="resetBtn">Resetar Tabela</button>
+      <button id="downloadBtn">Download da Tabela</button>
+      <button id="editBtn">Editar</button>
     </div>
-    <script src="tabela.js"></script>
-  </body>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Registo</th>
+          <th>Data</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th>Total (min)</th>
+          <th>Operação</th>
+          <th>Instalação</th>
+          <th>Rota</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <div id="operations-container"></div>
+  </div>
+  <script src="tabela.js"></script>
+</body>
 </html>

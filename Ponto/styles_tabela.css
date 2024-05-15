@@ -84,3 +84,6 @@ body {
 .deleteBtn:hover {
   background-color: darkred;
 }
+.red-text {
+  color: red;
+}

@@ -8,36 +8,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function adicionarLinha() {
-  // Coleta os dados do formulário, sem "descrição" ou "Localização"
-  var tempo = new Date().toLocaleTimeString(); // Pode usar a hora atual como tempo
+  var dataAtual = new Date();
+  var registoData = dataAtual.toLocaleDateString('pt-BR');
+  var registoHora = dataAtual.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  var registo = `${registoData} ${registoHora}`;
+
+  var data = document.getElementById("data").value;
   var entrada = document.getElementById("entrada").value;
   var saida = document.getElementById("saida").value;
   var operacao = document.getElementById("operacao-select").value;
   var instalacao = document.getElementById("instalacao").value;
   var rota = document.getElementById("rota-select").value;
 
-  var novoHorario = { tempo, entrada, saida, operacao, instalacao, rota };
+  var errorMessage = document.getElementById("error-message");
 
-  // Recupera os horários existentes ou inicializa um novo array
+  if (!data || !entrada || !saida) {
+    errorMessage.textContent = "Por favor, preencha todos os campos.";
+    errorMessage.style.color = "red";
+    return;
+  }
+
+  var novoHorario = { registo, data, entrada, saida, operacao, instalacao, rota };
+
   var horarios = JSON.parse(localStorage.getItem("horarios")) || [];
   horarios.push(novoHorario);
 
-  // Atualiza o localStorage com o novo conjunto de horários
   localStorage.setItem("horarios", JSON.stringify(horarios));
 
-  // Redireciona para a página de visualização da tabela
   window.location.href = "tabela.html";
-}
-
-
-function selecionarOperacao() {
-  var operacao = document.getElementById("operacao-select").value;
-  var caixaProgramavel = document.getElementById("caixa-programavel");
-
-  // Mostra ou esconde a caixa programável dependendo da operação selecionada
-  if (operacao === "inserirManualmente") {
-    caixaProgramavel.style.display = "inline-block";
-  } else {
-    caixaProgramavel.style.display = "none";
-  }
 }

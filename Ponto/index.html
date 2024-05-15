@@ -12,6 +12,10 @@
     <div class="form">
       <h1>Registro de Horários</h1>
       <div class="input-group">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data">
+      </div>
+      <div class="input-group">
         <label for="instalacao">Instalação:</label>
         <input type="text" id="instalacao" name="instalacao">
       </div>
@@ -34,7 +38,6 @@
           <option value="Pessoas Presas">Pessoas Presas</option>
         </select>
       </div>
-
       <div class="input-group">
         <label for="rota-select">Rota:</label>
         <select id="rota-select" name="rota">
@@ -44,6 +47,7 @@
       <div class="button-container">
         <button onclick="adicionarLinha()">Adicionar</button>
       </div>
+      <div id="error-message" class="error-message"></div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
